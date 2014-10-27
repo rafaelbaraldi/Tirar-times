@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BCB780519FEB31C004A7145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB780419FEB31C004A7145 /* Foundation.framework */; };
+		1BCB780719FEB31C004A7145 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB780619FEB31C004A7145 /* CoreGraphics.framework */; };
+		1BCB780919FEB31C004A7145 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB780819FEB31C004A7145 /* UIKit.framework */; };
+		1BCB780F19FEB31C004A7145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB780D19FEB31C004A7145 /* InfoPlist.strings */; };
+		1BCB781119FEB31C004A7145 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB781019FEB31C004A7145 /* main.m */; };
+		1BCB781519FEB31C004A7145 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB781419FEB31C004A7145 /* AppDelegate.m */; };
+		1BCB781819FEB31C004A7145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB781619FEB31C004A7145 /* Main.storyboard */; };
+		1BCB781B19FEB31C004A7145 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB781A19FEB31C004A7145 /* ViewController.m */; };
+		1BCB781D19FEB31C004A7145 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB781C19FEB31C004A7145 /* Images.xcassets */; };
+		1BCB782419FEB31D004A7145 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB782319FEB31D004A7145 /* XCTest.framework */; };
+		1BCB782519FEB31D004A7145 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB780419FEB31C004A7145 /* Foundation.framework */; };
+		1BCB782619FEB31D004A7145 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB780819FEB31C004A7145 /* UIKit.framework */; };
+		1BCB782E19FEB31D004A7145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB782C19FEB31D004A7145 /* InfoPlist.strings */; };
+		1BCB783019FEB31D004A7145 /* Tirar_timesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB782F19FEB31D004A7145 /* Tirar_timesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BCB782719FEB31D004A7145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BCB77F919FEB31C004A7145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BCB780019FEB31C004A7145;
+			remoteInfo = "Tirar times";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BCB780119FEB31C004A7145 /* Tirar times.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tirar times.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BCB780419FEB31C004A7145 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1BCB780619FEB31C004A7145 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1BCB780819FEB31C004A7145 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1BCB780C19FEB31C004A7145 /* Tirar times-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tirar times-Info.plist"; sourceTree = "<group>"; };
+		1BCB780E19FEB31C004A7145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BCB781019FEB31C004A7145 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BCB781219FEB31C004A7145 /* Tirar times-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tirar times-Prefix.pch"; sourceTree = "<group>"; };
+		1BCB781319FEB31C004A7145 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1BCB781419FEB31C004A7145 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1BCB781719FEB31C004A7145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BCB781919FEB31C004A7145 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1BCB781A19FEB31C004A7145 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1BCB781C19FEB31C004A7145 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1BCB782219FEB31D004A7145 /* Tirar timesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tirar timesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BCB782319FEB31D004A7145 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1BCB782B19FEB31D004A7145 /* Tirar timesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tirar timesTests-Info.plist"; sourceTree = "<group>"; };
+		1BCB782D19FEB31D004A7145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BCB782F19FEB31D004A7145 /* Tirar_timesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tirar_timesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BCB77FE19FEB31C004A7145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCB780719FEB31C004A7145 /* CoreGraphics.framework in Frameworks */,
+				1BCB780919FEB31C004A7145 /* UIKit.framework in Frameworks */,
+				1BCB780519FEB31C004A7145 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BCB781F19FEB31D004A7145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCB782419FEB31D004A7145 /* XCTest.framework in Frameworks */,
+				1BCB782619FEB31D004A7145 /* UIKit.framework in Frameworks */,
+				1BCB782519FEB31D004A7145 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BCB77F819FEB31C004A7145 = {
+			isa = PBXGroup;
+			children = (
+				1BCB780A19FEB31C004A7145 /* Tirar times */,
+				1BCB782919FEB31D004A7145 /* Tirar timesTests */,
+				1BCB780319FEB31C004A7145 /* Frameworks */,
+				1BCB780219FEB31C004A7145 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BCB780219FEB31C004A7145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB780119FEB31C004A7145 /* Tirar times.app */,
+				1BCB782219FEB31D004A7145 /* Tirar timesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BCB780319FEB31C004A7145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB780419FEB31C004A7145 /* Foundation.framework */,
+				1BCB780619FEB31C004A7145 /* CoreGraphics.framework */,
+				1BCB780819FEB31C004A7145 /* UIKit.framework */,
+				1BCB782319FEB31D004A7145 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BCB780A19FEB31C004A7145 /* Tirar times */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB781319FEB31C004A7145 /* AppDelegate.h */,
+				1BCB781419FEB31C004A7145 /* AppDelegate.m */,
+				1BCB781619FEB31C004A7145 /* Main.storyboard */,
+				1BCB781919FEB31C004A7145 /* ViewController.h */,
+				1BCB781A19FEB31C004A7145 /* ViewController.m */,
+				1BCB781C19FEB31C004A7145 /* Images.xcassets */,
+				1BCB780B19FEB31C004A7145 /* Supporting Files */,
+			);
+			path = "Tirar times";
+			sourceTree = "<group>";
+		};
+		1BCB780B19FEB31C004A7145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB780C19FEB31C004A7145 /* Tirar times-Info.plist */,
+				1BCB780D19FEB31C004A7145 /* InfoPlist.strings */,
+				1BCB781019FEB31C004A7145 /* main.m */,
+				1BCB781219FEB31C004A7145 /* Tirar times-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BCB782919FEB31D004A7145 /* Tirar timesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB782F19FEB31D004A7145 /* Tirar_timesTests.m */,
+				1BCB782A19FEB31D004A7145 /* Supporting Files */,
+			);
+			path = "Tirar timesTests";
+			sourceTree = "<group>";
+		};
+		1BCB782A19FEB31D004A7145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB782B19FEB31D004A7145 /* Tirar timesTests-Info.plist */,
+				1BCB782C19FEB31D004A7145 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BCB780019FEB31C004A7145 /* Tirar times */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BCB783319FEB31D004A7145 /* Build configuration list for PBXNativeTarget "Tirar times" */;
+			buildPhases = (
+				1BCB77FD19FEB31C004A7145 /* Sources */,
+				1BCB77FE19FEB31C004A7145 /* Frameworks */,
+				1BCB77FF19FEB31C004A7145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tirar times";
+			productName = "Tirar times";
+			productReference = 1BCB780119FEB31C004A7145 /* Tirar times.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BCB782119FEB31D004A7145 /* Tirar timesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BCB783619FEB31D004A7145 /* Build configuration list for PBXNativeTarget "Tirar timesTests" */;
+			buildPhases = (
+				1BCB781E19FEB31D004A7145 /* Sources */,
+				1BCB781F19FEB31D004A7145 /* Frameworks */,
+				1BCB782019FEB31D004A7145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BCB782819FEB31D004A7145 /* PBXTargetDependency */,
+			);
+			name = "Tirar timesTests";
+			productName = "Tirar timesTests";
+			productReference = 1BCB782219FEB31D004A7145 /* Tirar timesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BCB77F919FEB31C004A7145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "RAFAEL BARALDI";
+				TargetAttributes = {
+					1BCB782119FEB31D004A7145 = {
+						TestTargetID = 1BCB780019FEB31C004A7145;
+					};
+				};
+			};
+			buildConfigurationList = 1BCB77FC19FEB31C004A7145 /* Build configuration list for PBXProject "Tirar times" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BCB77F819FEB31C004A7145;
+			productRefGroup = 1BCB780219FEB31C004A7145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BCB780019FEB31C004A7145 /* Tirar times */,
+				1BCB782119FEB31D004A7145 /* Tirar timesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BCB77FF19FEB31C004A7145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCB781D19FEB31C004A7145 /* Images.xcassets in Resources */,
+				1BCB780F19FEB31C004A7145 /* InfoPlist.strings in Resources */,
+				1BCB781819FEB31C004A7145 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BCB782019FEB31D004A7145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCB782E19FEB31D004A7145 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BCB77FD19FEB31C004A7145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCB781B19FEB31C004A7145 /* ViewController.m in Sources */,
+				1BCB781519FEB31C004A7145 /* AppDelegate.m in Sources */,
+				1BCB781119FEB31C004A7145 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BCB781E19FEB31D004A7145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCB783019FEB31D004A7145 /* Tirar_timesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BCB782819FEB31D004A7145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BCB780019FEB31C004A7145 /* Tirar times */;
+			targetProxy = 1BCB782719FEB31D004A7145 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BCB780D19FEB31C004A7145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BCB780E19FEB31C004A7145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1BCB781619FEB31C004A7145 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BCB781719FEB31C004A7145 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BCB782C19FEB31D004A7145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BCB782D19FEB31D004A7145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BCB783119FEB31D004A7145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1BCB783219FEB31D004A7145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BCB783419FEB31D004A7145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tirar times/Tirar times-Prefix.pch";
+				INFOPLIST_FILE = "Tirar times/Tirar times-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1BCB783519FEB31D004A7145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tirar times/Tirar times-Prefix.pch";
+				INFOPLIST_FILE = "Tirar times/Tirar times-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1BCB783719FEB31D004A7145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tirar times.app/Tirar times";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tirar times/Tirar times-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tirar timesTests/Tirar timesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1BCB783819FEB31D004A7145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tirar times.app/Tirar times";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tirar times/Tirar times-Prefix.pch";
+				INFOPLIST_FILE = "Tirar timesTests/Tirar timesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BCB77FC19FEB31C004A7145 /* Build configuration list for PBXProject "Tirar times" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BCB783119FEB31D004A7145 /* Debug */,
+				1BCB783219FEB31D004A7145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BCB783319FEB31D004A7145 /* Build configuration list for PBXNativeTarget "Tirar times" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BCB783419FEB31D004A7145 /* Debug */,
+				1BCB783519FEB31D004A7145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BCB783619FEB31D004A7145 /* Build configuration list for PBXNativeTarget "Tirar timesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BCB783719FEB31D004A7145 /* Debug */,
+				1BCB783819FEB31D004A7145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BCB77F919FEB31C004A7145 /* Project object */;
+}
