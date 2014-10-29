@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "PlayerStore.h"
+#import "MeuBotao.h"
+#import "MeuTextField.h"
 
 @interface ViewController ()
 
@@ -23,6 +25,10 @@
     [[PlayerStore sharedStore] addPlayer:@"aagdad"];
     [[PlayerStore sharedStore] addPlayer:@"dgjhdgjdgjf"];
     [[PlayerStore sharedStore] addPlayer:@"pmonknl"];
+    
+    _tbJogadores.backgroundColor = [UIColor clearColor];
+    _tbJogadores.separatorColor = [UIColor whiteColor];
+    _tbJogadores.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -31,26 +37,43 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
-    UILabel* labelNome;
+    MeuTextField* labelNome;
     UIImageView* imagemSelecionado;
+    MeuBotao* btnEditar;
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-//        cell.backgroundColor = [UIColor greenColor];
+        cell.backgroundColor = [UIColor clearColor];
         
-        labelNome = [[UILabel alloc] initWithFrame:CGRectMake(40, 15, 270, 20)];
+        //Nome do Jogador
+        labelNome = [[MeuTextField alloc] initWithFrame:CGRectMake(40, 11, 200, 20)];
         labelNome.tag = 1;
+        labelNome.textColor = [UIColor colorWithRed:0.122 green:0.278 blue:0.533 alpha:1];
+        labelNome.enabled = NO;
+        labelNome.delegate = self;
+        labelNome.index = indexPath;
+        [labelNome addTarget:self action:@selector(fecharTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
         [cell addSubview:labelNome];
         
-        
+        //Imagem Selecionar
         imagemSelecionado = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 15, 15)];
         imagemSelecionado.tag = 2;
         [cell addSubview:imagemSelecionado];
+        
+        //Botao editar
+        btnEditar = [[MeuBotao alloc] initWithFrame:CGRectMake(245, 11, 60, 20)];
+        [btnEditar setTitle:@"Editar" forState:UIControlStateNormal];
+        btnEditar.tag = 3;
+        btnEditar.index = indexPath;
+        [btnEditar addTarget:self action:@selector(editarNome:) forControlEvents:UIControlEventTouchUpInside];
+        [cell addSubview:btnEditar];
     }
     else{
-        labelNome = (UILabel*)[cell viewWithTag:1];
+        labelNome = (MeuTextField*)[cell viewWithTag:1];
         imagemSelecionado = (UIImageView*)[cell viewWithTag:2];
+        btnEditar = (MeuBotao*)[cell viewWithTag:3];
     }
     
     labelNome.text = [[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:indexPath.row];
@@ -65,12 +88,75 @@
     return cell;
 }
 
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    [self fecharTextField:(MeuTextField*)textField];
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    _textoInicial = textField.text;
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [_textoDaLinha setEnabled:YES];
+    [_textoDaLinha becomeFirstResponder];
+}
+
+-(void)fecharTextField:(MeuTextField*)sender{
+    
+    if([[[PlayerStore sharedStore] allPlayersItems] containsObject:sender.text]){
+        if (![_textoInicial isEqualToString:sender.text]) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"ERRO" message:@"Esse jogador já existe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    }
+    else{
+        if ([[[PlayerStore sharedStore] jogadoresQueVaoJogar] containsObject:[[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:sender.index.row]]) {
+            NSUInteger index = [[[PlayerStore sharedStore] jogadoresQueVaoJogar] indexOfObject:[[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:sender.index.row]];
+            [[[PlayerStore sharedStore] jogadoresQueVaoJogar] replaceObjectAtIndex:index withObject:sender.text];
+        }
+    
+        [[PlayerStore sharedStore] replacePlayer:[[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:sender.index.row] for:sender.text];
+    
+        [sender resignFirstResponder];
+    }
+    
+    
+    sender.enabled = NO;
+}
+
+-(void)editarNome:(MeuBotao*)sender{
+    NSIndexPath* index = sender.index;
+    
+    UITableViewCell* cell = [_tbJogadores cellForRowAtIndexPath:index];
+    
+    MeuTextField* text = (MeuTextField*)[cell viewWithTag:1];
+    text.enabled = YES;
+    
+    _textoDaLinha = text;
+    
+    [text becomeFirstResponder];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([[[PlayerStore sharedStore] jogadoresQueVaoJogar] containsObject:[[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:indexPath.row]]) {
         [[[PlayerStore sharedStore] jogadoresQueVaoJogar] removeObject:[[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:indexPath.row]];
     }
     else{
         [[[PlayerStore sharedStore] jogadoresQueVaoJogar] addObject:[[[PlayerStore sharedStore] allPlayersItems] objectAtIndex:indexPath.row]];
+    }
+
+    [tableView reloadData];
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        PlayerStore* ps = [PlayerStore sharedStore];
+        NSArray* items = [ps allPlayersItems];
+        NSString* p = [items objectAtIndex:[indexPath row]];
+        [ps removePlayer:p];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
@@ -82,4 +168,27 @@
     return 1;
 }
 
+- (IBAction)btnTirarTimesClick:(id)sender {
+}
+
+- (IBAction)txtAdicionar:(id)sender {
+    
+    [sender resignFirstResponder];
+    
+    UITextField* text = (UITextField*)sender;
+
+    if ([text.text length] > 0 ) {
+        
+        if([[[PlayerStore sharedStore] allPlayersItems] containsObject:text.text]){
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"ERRO" message:@"Esse jogador já existe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+        else{
+            [[PlayerStore sharedStore] addPlayer:text.text];
+            [_tbJogadores reloadData];
+        }
+    }
+    
+    text.text = @"";
+}
 @end

@@ -25,6 +25,10 @@
 		1BCB783E19FEB6C2004A7145 /* PlayerStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB783D19FEB6C2004A7145 /* PlayerStore.m */; };
 		1BCB784119FEBC4B004A7145 /* selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB784019FEBC4B004A7145 /* selecionado.png */; };
 		1BCB784319FEBC50004A7145 /* deselecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB784219FEBC50004A7145 /* deselecionado.png */; };
+		317354861A01644900629B62 /* sortear.png in Resources */ = {isa = PBXBuildFile; fileRef = 317354851A01644900629B62 /* sortear.png */; };
+		317354901A01666800629B62 /* tirartimes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3173548F1A01666800629B62 /* tirartimes.png */; };
+		317354931A016E9000629B62 /* MeuBotao.m in Sources */ = {isa = PBXBuildFile; fileRef = 317354921A016E9000629B62 /* MeuBotao.m */; };
+		317354961A01730700629B62 /* MeuTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 317354951A01730700629B62 /* MeuTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,12 @@
 		1BCB783D19FEB6C2004A7145 /* PlayerStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStore.m; sourceTree = "<group>"; };
 		1BCB784019FEBC4B004A7145 /* selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selecionado.png; sourceTree = "<group>"; };
 		1BCB784219FEBC50004A7145 /* deselecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deselecionado.png; sourceTree = "<group>"; };
+		317354851A01644900629B62 /* sortear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sortear.png; sourceTree = "<group>"; };
+		3173548F1A01666800629B62 /* tirartimes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tirartimes.png; sourceTree = "<group>"; };
+		317354911A016E9000629B62 /* MeuBotao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeuBotao.h; sourceTree = "<group>"; };
+		317354921A016E9000629B62 /* MeuBotao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeuBotao.m; sourceTree = "<group>"; };
+		317354941A01730700629B62 /* MeuTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeuTextField.h; sourceTree = "<group>"; };
+		317354951A01730700629B62 /* MeuTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeuTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,10 @@
 				1BCB783C19FEB6C2004A7145 /* PlayerStore.h */,
 				1BCB783D19FEB6C2004A7145 /* PlayerStore.m */,
 				1BCB783F19FEBC3F004A7145 /* Imagens */,
+				317354911A016E9000629B62 /* MeuBotao.h */,
+				317354921A016E9000629B62 /* MeuBotao.m */,
+				317354941A01730700629B62 /* MeuTextField.h */,
+				317354951A01730700629B62 /* MeuTextField.m */,
 			);
 			path = "Tirar times";
 			sourceTree = "<group>";
@@ -172,6 +186,8 @@
 			children = (
 				1BCB784019FEBC4B004A7145 /* selecionado.png */,
 				1BCB784219FEBC50004A7145 /* deselecionado.png */,
+				317354851A01644900629B62 /* sortear.png */,
+				3173548F1A01666800629B62 /* tirartimes.png */,
 			);
 			name = Imagens;
 			sourceTree = "<group>";
@@ -252,8 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317354861A01644900629B62 /* sortear.png in Resources */,
 				1BCB784119FEBC4B004A7145 /* selecionado.png in Resources */,
 				1BCB781D19FEB31C004A7145 /* Images.xcassets in Resources */,
+				317354901A01666800629B62 /* tirartimes.png in Resources */,
 				1BCB780F19FEB31C004A7145 /* InfoPlist.strings in Resources */,
 				1BCB781819FEB31C004A7145 /* Main.storyboard in Resources */,
 				1BCB784319FEBC50004A7145 /* deselecionado.png in Resources */,
@@ -276,9 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCB781B19FEB31C004A7145 /* ViewController.m in Sources */,
+				317354931A016E9000629B62 /* MeuBotao.m in Sources */,
 				1BCB783B19FEB5C0004A7145 /* TimesViewController.m in Sources */,
 				1BCB781519FEB31C004A7145 /* AppDelegate.m in Sources */,
 				1BCB781119FEB31C004A7145 /* main.m in Sources */,
+				317354961A01730700629B62 /* MeuTextField.m in Sources */,
 				1BCB783E19FEB6C2004A7145 /* PlayerStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +504,7 @@
 				1BCB783519FEB31D004A7145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BCB783619FEB31D004A7145 /* Build configuration list for PBXNativeTarget "Tirar timesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +513,7 @@
 				1BCB783819FEB31D004A7145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

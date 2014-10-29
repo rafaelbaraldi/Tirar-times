@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeuTextField.h"
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tbJogadores;
+@property (strong, nonatomic) IBOutlet UIButton *btnTirarTimes;
+
+- (IBAction)btnTirarTimesClick:(id)sender;
+
+- (IBAction)txtAdicionar:(id)sender;
+
+@property MeuTextField* textoDaLinha;
+@property NSString* textoInicial;
 
 @end
