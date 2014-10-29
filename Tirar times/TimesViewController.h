@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TimesViewController.h
 //  Tirar times
 //
 //  Created by RAFAEL BARALDI on 27/10/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface TimesViewController : UIViewController
 
 @end

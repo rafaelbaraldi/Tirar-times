@@ -21,6 +21,10 @@
 		1BCB782619FEB31D004A7145 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCB780819FEB31C004A7145 /* UIKit.framework */; };
 		1BCB782E19FEB31D004A7145 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB782C19FEB31D004A7145 /* InfoPlist.strings */; };
 		1BCB783019FEB31D004A7145 /* Tirar_timesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB782F19FEB31D004A7145 /* Tirar_timesTests.m */; };
+		1BCB783B19FEB5C0004A7145 /* TimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB783A19FEB5BF004A7145 /* TimesViewController.m */; };
+		1BCB783E19FEB6C2004A7145 /* PlayerStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCB783D19FEB6C2004A7145 /* PlayerStore.m */; };
+		1BCB784119FEBC4B004A7145 /* selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB784019FEBC4B004A7145 /* selecionado.png */; };
+		1BCB784319FEBC50004A7145 /* deselecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BCB784219FEBC50004A7145 /* deselecionado.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		1BCB782B19FEB31D004A7145 /* Tirar timesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tirar timesTests-Info.plist"; sourceTree = "<group>"; };
 		1BCB782D19FEB31D004A7145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1BCB782F19FEB31D004A7145 /* Tirar_timesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tirar_timesTests.m; sourceTree = "<group>"; };
+		1BCB783919FEB5BF004A7145 /* TimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimesViewController.h; sourceTree = "<group>"; };
+		1BCB783A19FEB5BF004A7145 /* TimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimesViewController.m; sourceTree = "<group>"; };
+		1BCB783C19FEB6C2004A7145 /* PlayerStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStore.h; sourceTree = "<group>"; };
+		1BCB783D19FEB6C2004A7145 /* PlayerStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStore.m; sourceTree = "<group>"; };
+		1BCB784019FEBC4B004A7145 /* selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selecionado.png; sourceTree = "<group>"; };
+		1BCB784219FEBC50004A7145 /* deselecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deselecionado.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,11 @@
 				1BCB781A19FEB31C004A7145 /* ViewController.m */,
 				1BCB781C19FEB31C004A7145 /* Images.xcassets */,
 				1BCB780B19FEB31C004A7145 /* Supporting Files */,
+				1BCB783919FEB5BF004A7145 /* TimesViewController.h */,
+				1BCB783A19FEB5BF004A7145 /* TimesViewController.m */,
+				1BCB783C19FEB6C2004A7145 /* PlayerStore.h */,
+				1BCB783D19FEB6C2004A7145 /* PlayerStore.m */,
+				1BCB783F19FEBC3F004A7145 /* Imagens */,
 			);
 			path = "Tirar times";
 			sourceTree = "<group>";
@@ -150,6 +165,15 @@
 				1BCB782C19FEB31D004A7145 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BCB783F19FEBC3F004A7145 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				1BCB784019FEBC4B004A7145 /* selecionado.png */,
+				1BCB784219FEBC50004A7145 /* deselecionado.png */,
+			);
+			name = Imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BCB784119FEBC4B004A7145 /* selecionado.png in Resources */,
 				1BCB781D19FEB31C004A7145 /* Images.xcassets in Resources */,
 				1BCB780F19FEB31C004A7145 /* InfoPlist.strings in Resources */,
 				1BCB781819FEB31C004A7145 /* Main.storyboard in Resources */,
+				1BCB784319FEBC50004A7145 /* deselecionado.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCB781B19FEB31C004A7145 /* ViewController.m in Sources */,
+				1BCB783B19FEB5C0004A7145 /* TimesViewController.m in Sources */,
 				1BCB781519FEB31C004A7145 /* AppDelegate.m in Sources */,
 				1BCB781119FEB31C004A7145 /* main.m in Sources */,
+				1BCB783E19FEB6C2004A7145 /* PlayerStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
