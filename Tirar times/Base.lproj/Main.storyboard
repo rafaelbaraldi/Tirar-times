@@ -30,15 +30,16 @@
                                 <rect key="frame" x="0.0" y="122" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="ukP-5L-AlE"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="2oY-Fh-dK1"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.76078431369999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Liste os jogadores" id="sYw-nx-20g"/>
+                    <navigationItem key="navigationItem" title="Liste os jogadores" id="sYw-nx-20g" colorLabel="IBBuiltInLabel-Yellow"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

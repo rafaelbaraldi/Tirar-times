@@ -15,10 +15,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     [[PlayerStore sharedStore] addPlayer:@"asfaf"];
     [[PlayerStore sharedStore] addPlayer:@"agasgasdg"];
@@ -27,10 +25,8 @@
     [[PlayerStore sharedStore] addPlayer:@"pmonknl"];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -41,7 +37,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
-        cell.backgroundColor = [UIColor greenColor];
+//        cell.backgroundColor = [UIColor greenColor];
         
         labelNome = [[UILabel alloc] initWithFrame:CGRectMake(40, 15, 270, 20)];
         labelNome.tag = 1;
