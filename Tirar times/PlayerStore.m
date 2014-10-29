@@ -28,6 +28,7 @@
         allPlayers = [[NSMutableArray alloc]init];
         allTeams = [[NSMutableArray alloc]init];
         allSubstitutes = [[NSMutableArray alloc]init];
+        _jogadoresQueVaoJogar = [[NSMutableArray alloc] init];
     }
     return self;
 }
