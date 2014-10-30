@@ -21,4 +21,6 @@
 @property MeuTextField* textoDaLinha;
 @property NSString* textoInicial;
 
+@property UIBarButtonItem *buttonItemOpcoes;
+
 @end

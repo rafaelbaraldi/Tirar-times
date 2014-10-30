@@ -25,10 +25,16 @@
 -(id)init{
     self = [super init];
     if(self){
-        allPlayers = [[NSMutableArray alloc]init];
         allTeams = [[NSMutableArray alloc]init];
         allSubstitutes = [[NSMutableArray alloc]init];
         _jogadoresQueVaoJogar = [[NSMutableArray alloc] init];
+        
+        _BDJogadores = [NSUserDefaults standardUserDefaults];
+        allPlayers = [_BDJogadores objectForKey:@"jogadores"];
+        
+        if(allPlayers == nil){
+            allPlayers = [[NSMutableArray alloc]init];
+        }
     }
     return self;
 }
@@ -39,6 +45,9 @@
 
 -(void)addPlayer:(NSString*)nome{
     [allPlayers addObject:nome];
+
+    [_BDJogadores setObject:allPlayers forKey:@"jogadores"];
+    [_BDJogadores synchronize];
 }
 
 -(NSArray*)allTeamsItems{
@@ -54,16 +63,16 @@
 
 -(void)createTeams:(int)times Maximo:(int)maximo{
     
-    NSMutableArray* players = [[NSMutableArray alloc]initWithArray:allPlayers copyItems:YES];
+    NSMutableArray* players = [[NSMutableArray alloc]initWithArray:_jogadoresQueVaoJogar copyItems:YES];
     
     [allTeams removeAllObjects];
     [allSubstitutes removeAllObjects];
     
     int countPlayres = [players count];
-    if(times == 0 && [allPlayers count] > 0 && maximo != 0){
+    if(times == 0 && [_jogadoresQueVaoJogar count] > 0 && maximo != 0){
         times = floor(countPlayres / maximo);
     }
-    else if (maximo == 0 && [allPlayers count] > 0 && times != 0){
+    else if (maximo == 0 && [_jogadoresQueVaoJogar count] > 0 && times != 0){
         maximo = floor(countPlayres / times);
     }
     

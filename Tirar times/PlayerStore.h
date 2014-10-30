@@ -16,6 +16,8 @@
 
 @property NSMutableArray* jogadoresQueVaoJogar;
 
+@property NSUserDefaults *BDJogadores;
+
 +(PlayerStore*)sharedStore;
 
 -(NSArray*)allPlayersItems;

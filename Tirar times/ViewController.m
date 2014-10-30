@@ -20,19 +20,50 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    [[PlayerStore sharedStore] addPlayer:@"asfaf"];
-    [[PlayerStore sharedStore] addPlayer:@"agasgasdg"];
-    [[PlayerStore sharedStore] addPlayer:@"aagdad"];
-    [[PlayerStore sharedStore] addPlayer:@"dgjhdgjdgjf"];
-    [[PlayerStore sharedStore] addPlayer:@"pmonknl"];
-    
     _tbJogadores.backgroundColor = [UIColor clearColor];
     _tbJogadores.separatorColor = [UIColor whiteColor];
     _tbJogadores.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+//    _tbJogadores.editing = YES;
+    
+    _buttonItemOpcoes = [[UIBarButtonItem alloc] initWithTitle:@"Editar" style:UIBarButtonItemStylePlain target:self action:@selector(editarJogadores)];
+    _buttonItemOpcoes.tintColor = [UIColor whiteColor];
+    [[self navigationItem] setRightBarButtonItem:_buttonItemOpcoes animated:YES];
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
+}
+
+-(void)editarJogadores{
+    
+    if(_tbJogadores.editing){
+        _tbJogadores.editing = NO;
+        _buttonItemOpcoes.title = @"Editar";
+        
+//        for (int i = 0; i < [[[PlayerStore sharedStore] jogadoresQueVaoJogar] count]; i++) {
+//            UITableViewCell* cell = [_tbJogadores cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]];
+//            MeuTextField* text = (MeuTextField*)[cell viewWithTag:1];
+//            text.enabled = YES;
+//        }
+    }
+    else{
+        _tbJogadores.editing = YES;
+        _buttonItemOpcoes.title = @"Pronto";
+//        for (int i = 0; i < [[[PlayerStore sharedStore] jogadoresQueVaoJogar] count]; i++) {
+//            UITableViewCell* cell = [_tbJogadores cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]];
+//            MeuTextField* text = (MeuTextField*)[cell viewWithTag:1];
+//            text.enabled = NO;
+//        }
+    }
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    
+    [[PlayerStore sharedStore]movePlayerAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+}
+
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -68,7 +99,7 @@
         btnEditar.tag = 3;
         btnEditar.index = indexPath;
         [btnEditar addTarget:self action:@selector(editarNome:) forControlEvents:UIControlEventTouchUpInside];
-        [cell addSubview:btnEditar];
+//        [cell addSubview:btnEditar];
     }
     else{
         labelNome = (MeuTextField*)[cell viewWithTag:1];
@@ -98,7 +129,7 @@
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    [_textoDaLinha setEnabled:YES];
+//    [_textoDaLinha setEnabled:YES];
     [_textoDaLinha becomeFirstResponder];
 }
 
@@ -122,7 +153,7 @@
     }
     
     
-    sender.enabled = NO;
+//    sender.enabled = NO;
 }
 
 -(void)editarNome:(MeuBotao*)sender{
@@ -131,7 +162,7 @@
     UITableViewCell* cell = [_tbJogadores cellForRowAtIndexPath:index];
     
     MeuTextField* text = (MeuTextField*)[cell viewWithTag:1];
-    text.enabled = YES;
+//    text.enabled = YES;
     
     _textoDaLinha = text;
     
