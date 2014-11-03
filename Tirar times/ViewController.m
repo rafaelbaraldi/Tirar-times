@@ -187,6 +187,9 @@
         NSString* p = [items objectAtIndex:[indexPath row]];
         [ps removePlayer:p];
         
+        [[[PlayerStore sharedStore] BDJogadores] removeObjectForKey:p];
+        [[[PlayerStore sharedStore] BDJogadores] synchronize];
+        
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
