@@ -68,7 +68,7 @@
     [allTeams removeAllObjects];
     [allSubstitutes removeAllObjects];
     
-    int countPlayres = [players count];
+    int countPlayres = (int)[players count];
     if(times == 0 && [_jogadoresQueVaoJogar count] > 0 && maximo != 0){
         times = floor(countPlayres / maximo);
     }
