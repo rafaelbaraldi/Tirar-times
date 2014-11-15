@@ -30,7 +30,7 @@
         _jogadoresQueVaoJogar = [[NSMutableArray alloc] init];
         
         _BDJogadores = [NSUserDefaults standardUserDefaults];
-        allPlayers = [_BDJogadores objectForKey:@"jogadores"];
+        allPlayers = [NSMutableArray arrayWithArray:[_BDJogadores objectForKey:@"jogadores"]];
         
         if(allPlayers == nil){
             allPlayers = [[NSMutableArray alloc]init];
