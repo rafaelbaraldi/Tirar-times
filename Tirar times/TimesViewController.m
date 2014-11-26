@@ -112,7 +112,11 @@
 
 - (IBAction)btnSortearClick:(id)sender {
     
+<<<<<<< HEAD
     if(_txtNumeroJogadores.text.length > 0 || _txtNumeroTimes.text.length > 0){
+=======
+    if(_txtNumeroJogadores.text.length != 0 || _txtNumeroTimes.text.length != 0){
+>>>>>>> FETCH_HEAD
     
         [[PlayerStore sharedStore]createTeams:[self.txtNumeroTimes.text intValue] Maximo:[self.txtNumeroJogadores.text intValue]];
         

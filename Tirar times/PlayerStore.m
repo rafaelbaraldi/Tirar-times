@@ -30,7 +30,11 @@
         _jogadoresQueVaoJogar = [[NSMutableArray alloc] init];
         
         _BDJogadores = [NSUserDefaults standardUserDefaults];
+<<<<<<< HEAD
         _allPlayers = [[_BDJogadores objectForKey:@"jogadores"] mutableCopy];
+=======
+        allPlayers = [NSMutableArray arrayWithArray:[_BDJogadores objectForKey:@"jogadores"]];
+>>>>>>> FETCH_HEAD
         
         if(_allPlayers == nil){
             _allPlayers = [[NSMutableArray alloc]init];
