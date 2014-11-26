@@ -79,7 +79,7 @@
          text.text = @"Jogadores de proximo";
     }
     else{
-        text.text = [NSString stringWithFormat:@"Time %d", section + 1];
+        text.text = [NSString stringWithFormat:@"Time %ld", (long)section + 1];
     }
     
     text.textColor = [UIColor whiteColor];
@@ -112,7 +112,7 @@
 
 - (IBAction)btnSortearClick:(id)sender {
     
-    if(!_txtNumeroJogadores.text.length == 0 || _txtNumeroTimes.text.length == 0){
+    if(_txtNumeroJogadores.text.length > 0 || _txtNumeroTimes.text.length > 0){
     
         [[PlayerStore sharedStore]createTeams:[self.txtNumeroTimes.text intValue] Maximo:[self.txtNumeroJogadores.text intValue]];
         

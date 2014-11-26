@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PlayerStore : NSObject{
-    NSMutableArray* allPlayers;
-    NSMutableArray* allTeams;
-    NSMutableArray* allSubstitutes;
-}
+@interface PlayerStore : NSObject
+
+
+@property NSMutableArray* allPlayers;
+@property NSMutableArray* allTeams;
+@property NSMutableArray* allSubstitutes;
 
 @property NSMutableArray* jogadoresQueVaoJogar;
 
-@property NSUserDefaults *BDJogadores;
+@property NSUserDefaults* BDJogadores;
 
 +(PlayerStore*)sharedStore;
 

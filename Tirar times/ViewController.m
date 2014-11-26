@@ -59,7 +59,10 @@
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
     
-    [[PlayerStore sharedStore]movePlayerAtIndex:[sourceIndexPath row] toIndex:[destinationIndexPath row]];
+    int i = (int)destinationIndexPath.row;
+    int j = (int)sourceIndexPath.row;
+    
+    [[PlayerStore sharedStore]movePlayerAtIndex:j toIndex:i];
 }
 
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -218,7 +221,10 @@
             [alert show];
         }
         else{
-            [[PlayerStore sharedStore] addPlayer:text.text];
+            
+            NSString* jogador = text.text;
+            
+            [[PlayerStore sharedStore] addPlayer:jogador];
             [_tbJogadores reloadData];
         }
     }

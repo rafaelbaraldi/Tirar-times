@@ -25,48 +25,50 @@
 -(id)init{
     self = [super init];
     if(self){
-        allTeams = [[NSMutableArray alloc]init];
-        allSubstitutes = [[NSMutableArray alloc]init];
+        _allTeams = [[NSMutableArray alloc]init];
+        _allSubstitutes = [[NSMutableArray alloc]init];
         _jogadoresQueVaoJogar = [[NSMutableArray alloc] init];
         
         _BDJogadores = [NSUserDefaults standardUserDefaults];
-        allPlayers = [_BDJogadores objectForKey:@"jogadores"];
+        _allPlayers = [[_BDJogadores objectForKey:@"jogadores"] mutableCopy];
         
-        if(allPlayers == nil){
-            allPlayers = [[NSMutableArray alloc]init];
+        if(_allPlayers == nil){
+            _allPlayers = [[NSMutableArray alloc]init];
         }
     }
     return self;
 }
 
 -(NSArray*)allPlayersItems{
-    return allPlayers;
+    return _allPlayers;
 }
 
 -(void)addPlayer:(NSString*)nome{
-    [allPlayers addObject:nome];
+    
+    [_allPlayers addObject:nome];
 
-    [_BDJogadores setObject:allPlayers forKey:@"jogadores"];
+
+    [_BDJogadores setObject:_allPlayers forKey:@"jogadores"];
     [_BDJogadores synchronize];
 }
 
 -(NSArray*)allTeamsItems{
-    return allTeams;
+    return _allTeams;
 }
 
 -(NSArray*)allSubstitutesItems{
-    return allSubstitutes;
+    return _allSubstitutes;
 }
 -(void)addSubstitutes:(NSString*)nome{
-    [allSubstitutes addObject:nome];
+    [_allSubstitutes addObject:nome];
 }
 
 -(void)createTeams:(int)times Maximo:(int)maximo{
     
     NSMutableArray* players = [[NSMutableArray alloc]initWithArray:_jogadoresQueVaoJogar copyItems:YES];
     
-    [allTeams removeAllObjects];
-    [allSubstitutes removeAllObjects];
+    [_allTeams removeAllObjects];
+    [_allSubstitutes removeAllObjects];
     
     int countPlayres = (int)[players count];
     if(times == 0 && [_jogadoresQueVaoJogar count] > 0 && maximo != 0){
@@ -77,38 +79,38 @@
     }
     
     for(int i = 0; i < times; i++){
-        [allTeams addObject:[[NSMutableArray alloc]init]];
+        [_allTeams addObject:[[NSMutableArray alloc]init]];
         
         for(int j = 0; j < maximo; j++){
             if([players count] > 0){
                 int randi = arc4random() % [players count];
-                [[allTeams objectAtIndex:i]addObject:[players objectAtIndex:randi]];
+                [[_allTeams objectAtIndex:i]addObject:[players objectAtIndex:randi]];
                 [players removeObjectAtIndex:randi];
             }
         }
     }
     if([players count] > 0){
-        allSubstitutes = [NSMutableArray arrayWithArray:players];
+        _allSubstitutes = [NSMutableArray arrayWithArray:players];
     }
 }
 
 -(void)removePlayer:(NSString *)nome{
-    [allPlayers removeObjectIdenticalTo:nome];
+    [_allPlayers removeObjectIdenticalTo:nome];
 }
 
 -(void)movePlayerAtIndex:(int)from toIndex:(int)to{
     if(from == to)
         return;
     
-    NSString* p = [allPlayers objectAtIndex:from];
-    [allPlayers removeObjectAtIndex:from];
-    [allPlayers insertObject:p atIndex:to];
+    NSString* p = [_allPlayers objectAtIndex:from];
+    [_allPlayers removeObjectAtIndex:from];
+    [_allPlayers insertObject:p atIndex:to];
 }
 
 -(void)replacePlayer:(NSString *)old for:(NSString *)new{
-    NSInteger position = [allPlayers indexOfObjectIdenticalTo:old];
-    [allPlayers removeObjectIdenticalTo:old];
-    [allPlayers insertObject:new atIndex:position];
+    NSInteger position = [_allPlayers indexOfObjectIdenticalTo:old];
+    [_allPlayers removeObjectIdenticalTo:old];
+    [_allPlayers insertObject:new atIndex:position];
 }
 
 @end
